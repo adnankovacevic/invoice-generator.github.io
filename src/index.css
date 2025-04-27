@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  body {
+    @apply font-poppins;
+  }
+}
+
+@layer components {
+
+  .btn {
+    @apply px-4 py-2 rounded font-semibold shadow focus:outline-none focus:ring-2 focus:ring-offset-2 transition duration-150 ease-in-out;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white hover:opacity-90 focus:ring-primary;
+  }
+
+  .btn-secondary {
+    @apply btn bg-secondary text-white hover:opacity-90 focus:ring-secondary;
+  }
+
+  .btn-tertiary {
+    @apply btn bg-tertiary text-white hover:opacity-90 focus:ring-tertiary;
+  }
+
+  .btn-outline-primary {
+    @apply btn border border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary;
+  }
+
+
+  .card {
+    @apply bg-white shadow-lg rounded-lg p-4 md:p-6;
+
+  }
+
+  .card-header {
+    @apply text-lg font-bold text-gray-900 mb-4 pb-2 border-b;
+
+  }
+
+  .card-body {
+    @apply text-gray-700;
+  }
+
+  .card-footer {
+    @apply text-right mt-4 pt-2 border-t;
+
+  }
+
+
+  .alert {
+    @apply border rounded p-4 mb-4;
+
+  }
+
+  .alert-danger {
+
+    @apply bg-red-100 text-red-700 border-red-400;
+  }
+
+  .alert-success {
+    @apply bg-green-100 text-green-700 border-green-400;
+  }
+
+  .alert-info {
+    @apply bg-blue-100 text-blue-700 border-blue-400;
+  }
+
+
+
+
+
+  .invoice-table {
+    @apply w-full text-left border-collapse mb-6;
+
+  }
+
+  .invoice-table th {
+    @apply bg-gray-100 text-gray-600 uppercase text-sm font-semibold p-3 border-b-2 border-gray-200;
+  }
+
+  .invoice-table td {
+    @apply p-3 border-b border-gray-200 text-sm;
+  }
+
+  .invoice-table tbody tr:hover {
+    @apply bg-gray-50;
+  }
+
+}
+
+
+@layer utilities {}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    background-color: #fff !important;
+    font-family: 'Poppins', sans-serif !important;
+
+    font-size: 9pt !important;
+
+    color: #000 !important;
+  }
+
+
+  .container {
+    margin: 0 !important;
+    padding: 1cm !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-shadow: none !important;
+    background-color: #fff !important;
+    border: none !important;
+  }
+
+
+  .bg-white {
+    background-color: #fff !important;
+  }
+
+  .shadow-lg {
+    box-shadow: none !important;
+  }
+
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  div,
+  label,
+  th,
+  td {
+    color: #000 !important;
+  }
+
+  .text-gray-600,
+  .text-gray-700,
+  .text-gray-800 {
+    color: #000 !important;
+  }
+
+  .text-blue-700 {
+    color: #000 !important;
+  }
+
+
+
+
+  button {
+    display: none !important;
+  }
+
+
+
+
+  input,
+  textarea {
+    border: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    padding: 1px 0 !important;
+    color: #000 !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100% !important;
+    min-width: 50px !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    resize: none !important;
+  }
+
+  .grid input,
+  .flex input {
+    width: auto;
+    flex-grow: 1;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none !important;
+  }
+
+  input[type="date"] {
+    display: inline-block;
+    width: auto;
+    padding: 0 !important;
+  }
+
+  .md\:text-right input {
+    text-align: left !important;
+  }
+
+
+  table.invoice-table {
+
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  table.invoice-table thead {
+    display: table-header-group;
+  }
+
+  table.invoice-table tr {
+    page-break-inside: avoid;
+  }
+
+  table.invoice-table th,
+  table.invoice-table td {
+    padding: 4px 8px !important;
+    border-bottom: 1px solid #ccc !important;
+    color: #000 !important;
+  }
+
+  table.invoice-table th {
+    background-color: #eee !important;
+
+  }
+
+  .bg-gray-100 {
+    background-color: #eee !important;
+  }
+
+
+}
