@@ -14,7 +14,7 @@ function LineItemsTable({ items, handleLineItemChange, handleAddLineItem, handle
                         <th className="py-3 px-4 text-center w-1/6">Qty</th>
                         <th className="py-3 px-4 text-right w-1/6">Unit Price</th>
                         <th className="py-3 px-4 text-right w-1/6">Total</th>
-                        <th className="py-3 px-4 text-center no-print w-12"></th> {/* Action column */}
+                        <th className="py-3 px-4 text-center no-print w-12"></th>
                     </tr>
                 </thead>
                 <tbody className="text-gray-700 text-sm font-light">
